@@ -1,0 +1,10 @@
+.rotate {
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+.hand {
+    background-size: contain;
+    background: no-repeat center;
+    width: 30%;
+}

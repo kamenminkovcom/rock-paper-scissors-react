@@ -1,0 +1,7 @@
+.score-bar-container {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-radius: .25rem;
+    color: #6c757d;
+}

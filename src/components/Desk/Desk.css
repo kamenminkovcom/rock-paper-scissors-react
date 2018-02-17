@@ -1,0 +1,11 @@
+.desk {
+    border: black solid 1px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.desk-half {
+    height: 50%;
+    width: 100%
+}
