@@ -8,7 +8,8 @@ const Hand = ({isCpu, handType}) => (
     <div className={classNames('hand',
         'background-no-repeat',
         'background-contain-size',
-        {rotate: isCpu}, handType)}/>
+        {rotate: isCpu},
+        handType)}/>
 );
 
 Hand.propTypes = {

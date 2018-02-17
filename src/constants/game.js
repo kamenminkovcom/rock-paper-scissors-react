@@ -21,3 +21,9 @@ export const gameRules = {
         [handTypes.rock]: 0
     }
 };
+
+export const possibleResults = {
+    win: 'win',
+    lose: 'lose',
+    draw: 'draw'
+};

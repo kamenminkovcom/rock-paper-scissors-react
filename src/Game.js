@@ -3,7 +3,7 @@ import Hand from './components/Hand/Hand';
 import Desk from './components/Desk/Desk';
 import ScoreBar from './components/ScoreBar/ScoreBar';
 import ToolBar from './components/ToolBar/ToolBar';
-import {bindTo, randomizeHandTypes} from './utils/utils';
+import {bindTo, randomizeHandTypes, getResult} from './utils/utils';
 import {handTypes, gameRules} from './constants/game';
 
 class Game extends React.Component {
@@ -12,14 +12,13 @@ class Game extends React.Component {
         bindTo('startGame', 'choseHandType')(this);
         this.initialState = {
             cpuChoice: null,
-            playerChoice: null,
-            cpuScore: 0,
-            playerScore: 0
+            playerChoice: null
         };
         this.state = {
             isPlaying: false,
-            cpuScore: this.initialState.cpuScore,
-            playerScore: this.initialState.playerScore
+            cpuScore: 0,
+            playerScore: 0,
+            history: []
         };
     }
 
@@ -32,18 +31,24 @@ class Game extends React.Component {
     }
 
     choseHandType(playerChoice) {
-        const handTypesCollection = Object.keys(handTypes);
+        const handTypesCollection = Object.values(handTypes);
         const handTypesRandomIndex = randomizeHandTypes(handTypesCollection.length);
         const cpuChoice = handTypesCollection[handTypesRandomIndex];
         //Results from the current game
         const cpuPoints = gameRules[cpuChoice][playerChoice];
         const playerPoints = gameRules[playerChoice][cpuChoice];
+        const gameResult = {
+            cpuChoice,
+            playerChoice,
+            result: getResult(cpuPoints, playerPoints)
+        };
         this.setState(prevState => ({
             cpuChoice,
             playerChoice,
             isPlaying: !prevState.isPlaying,
             cpuScore: prevState.cpuScore += cpuPoints,
-            playerScore: prevState.playerScore += playerPoints
+            playerScore: prevState.playerScore += playerPoints,
+            history: [...prevState.history, gameResult]
         }))
     }
 
@@ -53,7 +58,8 @@ class Game extends React.Component {
             cpuChoice,
             playerChoice,
             cpuScore,
-            playerScore
+            playerScore,
+            history
         } = this.state;
 
         return (
@@ -63,7 +69,7 @@ class Game extends React.Component {
                     <Hand isCpu={!!cpuChoice} handType={cpuChoice ? cpuChoice : 'rules'}/>
                     <Desk playFunc={this.startGame}
                           isPlaying={isPlaying}
-                          history={[]}  />
+                          history={history.reverse()}  />
                     <Hand handType={playerChoice ? playerChoice : 'rules'}/>
                 </div>
                 {isPlaying && <ToolBar choseHandType={this.choseHandType}
