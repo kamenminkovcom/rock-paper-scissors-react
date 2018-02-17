@@ -6,12 +6,6 @@
     height: 400px;
 }
 
-.tool-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .background-no-repeat {
     background: no-repeat center;
 }

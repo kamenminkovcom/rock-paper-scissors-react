@@ -5,27 +5,26 @@ import {handTypes, possibleResults} from '../../constants/game';
 
 import './Desk.css';
 
-const Desk = ({playFunc, isPlaying, history}) => {
-
-    return (
-        <div className="desk">
-            <div className="desk-half">
-                {
-                    isPlaying ?
-                        <span>Please, make your choice.</span> :
-                        <button onClick={playFunc}>Play!</button>
-                }
-            </div>
-            <div className="desk-half">
-                {
-                    history.map(h => <HistoryRow result={h.result}
-                                                 cpuChoice={h.cpuChoice}
-                                                 playerChoice={h .playerChoice}/>)
-                }
-            </div>
+const Desk = ({playFunc, isPlaying, history}) => (
+    <div className="desk">
+        <div className="desk-half aa">
+            {
+                isPlaying ?
+                    <div className="play-message">Please, make your choice.</div> :
+                    <div className="play-button-container">
+                        <button className="play-button" onClick={playFunc}>Play!</button>
+                    </div>
+            }
         </div>
-    );
-}
+        <div className="desk-half">
+            {
+                history.map(h => <HistoryRow result={h.result}
+                                             cpuChoice={h.cpuChoice}
+                                             playerChoice={h .playerChoice}/>)
+            }
+        </div>
+    </div>
+);
 
 Desk.propTypes = {
     handleClick: PropTypes.func.isRequred,
