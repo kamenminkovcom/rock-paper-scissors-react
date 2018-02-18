@@ -18,3 +18,5 @@ export const getResult = (cpuPoints, playerPoints) => {
             return possibleResults.lose;
     }
 };
+
+export const resizeCollection = (arr, count) => arr.slice(0, count);

@@ -3,8 +3,8 @@ import Hand from './components/Hand/Hand';
 import Desk from './components/Desk/Desk';
 import ScoreBar from './components/ScoreBar/ScoreBar';
 import ToolBar from './components/ToolBar/ToolBar';
-import {bindTo, randomizeHandTypes, getResult} from './utils/utils';
-import {handTypes, gameRules} from './constants/game';
+import {bindTo, randomizeHandTypes, getResult, resizeCollection} from './utils/utils';
+import {handTypes, gameRules, gameHistoryCount} from './constants/game';
 
 class Game extends React.Component {
     constructor(props) {
@@ -48,7 +48,7 @@ class Game extends React.Component {
             isPlaying: !prevState.isPlaying,
             cpuScore: prevState.cpuScore += cpuPoints,
             playerScore: prevState.playerScore += playerPoints,
-            history: [...prevState.history, gameResult]
+            history: resizeCollection([gameResult, ...prevState.history], gameHistoryCount)
         }))
     }
 
@@ -69,7 +69,7 @@ class Game extends React.Component {
                     <Hand isCpu={!!cpuChoice} handType={cpuChoice ? cpuChoice : 'rules'}/>
                     <Desk playFunc={this.startGame}
                           isPlaying={isPlaying}
-                          history={history.reverse()}  />
+                          history={history}  />
                     <Hand handType={playerChoice ? playerChoice : 'rules'}/>
                 </div>
                 {isPlaying && <ToolBar choseHandType={this.choseHandType}

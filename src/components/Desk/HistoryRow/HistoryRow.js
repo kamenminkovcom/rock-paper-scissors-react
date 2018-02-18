@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clssnames from 'classnames';
+import {classNames, possibleResults, handTypes} from '../../../constants/game';
 
 import './HistoryRow.css';
 
@@ -9,8 +10,9 @@ const HistoryRow = ({result, cpuChoice, playerChoice}) => (
         <div className={clssnames(cpuChoice,
             'choice-icon',
             'background-no-repeat',
-            'background-contain-size')}/>
-            <span>{result}</span>
+            'background-contain-size',
+            'rotate')}/>
+            <span className={clssnames('capitalize', classNames[result])}>{result}</span>
         <div className={clssnames(playerChoice,
             'choice-icon',
             'background-no-repeat',
@@ -19,9 +21,9 @@ const HistoryRow = ({result, cpuChoice, playerChoice}) => (
 );
 
 HistoryRow.propTypes = {
-    result: PropTypes.string.isRequired,
-    cpuChoice: PropTypes.string.isRequired,
-    playerChoice: PropTypes.string.isRequired
+    result: PropTypes.oneOf(Object.values(possibleResults)).isRequired,
+    cpuChoice: PropTypes.oneOf(Object.values(handTypes)).isRequired,
+    playerChoice: PropTypes.oneOf(Object.values(handTypes)).isRequired
 };
 
 export default HistoryRow;

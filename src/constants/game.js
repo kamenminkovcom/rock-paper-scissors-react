@@ -27,3 +27,12 @@ export const possibleResults = {
     lose: 'lose',
     draw: 'draw'
 };
+
+//may we would like to change classNames and it should not break the logic
+export const classNames = {
+    [possibleResults.win]: 'win',
+    [possibleResults.lose]: 'lose',
+    [possibleResults.draw]: 'draw'
+};
+
+export const gameHistoryCount = 5;

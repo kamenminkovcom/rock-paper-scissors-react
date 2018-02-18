@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HistoryRow from './HistoryRow/HistoryRow';
+import PlayButton from './PlayButton/PlayButton';
+import PlayMessage from './PlayMessage/PlayMessage';
+import ResultMessage from './ResultMessage/ResultMessage';
 import {handTypes, possibleResults} from '../../constants/game';
 
 import './Desk.css';
@@ -10,9 +13,12 @@ const Desk = ({playFunc, isPlaying, history}) => (
         <div className="desk-half aa">
             {
                 isPlaying ?
-                    <div className="play-message">Please, make your choice.</div> :
-                    <div className="play-button-container">
-                        <button className="play-button" onClick={playFunc}>Play!</button>
+                    <PlayMessage/> :
+                    <div>
+                        <PlayButton playFunc={playFunc}/>
+                        {history.length !== 0 &&
+                        <ResultMessage message={history[0].result}
+                                       result={history[0].result}/>}
                     </div>
             }
         </div>
