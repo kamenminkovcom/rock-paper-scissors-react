@@ -1,11 +1,23 @@
 .desk {
-    border: black solid 1px;
+    border: var(--blue) solid 1px;
     width: 40%;
     display: flex;
     flex-direction: column;
+    border-radius: .25rem;
 }
 
 .desk-half {
     height: 50%;
-    width: 100%
+    width: 100%;
+    position: relative;
+}
+
+.history-header {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 1%;
+    width: 100%;
+    color: #6c757d;
+    font-size: 1rem;
 }

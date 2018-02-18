@@ -5,9 +5,3 @@
     border: none;
     cursor: pointer;
 }
-
-.tool-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}

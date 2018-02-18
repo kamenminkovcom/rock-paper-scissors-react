@@ -6,7 +6,7 @@ import {handTypes} from '../../constants/game';
 
 describe('<ToolBar/>', () => {
     it('Should render correctly', () => {
-        const wrapper = shallow(<ToolBar handTypes={Object.values(handTypes)} choseHandType={() => {}}/>);
+        const wrapper = shallow(<ToolBar handTypes={handTypes} choseHandType={() => {}}/>);
         expect(wrapper).toMatchSnapshot();
     });
 });

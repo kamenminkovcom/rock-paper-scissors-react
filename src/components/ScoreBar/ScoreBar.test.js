@@ -7,5 +7,4 @@ describe('<ScoreBar/>', () => {
         const wrapper = shallow(<ScoreBar cpuScores={1} playerScores={1}/>);
        expect(wrapper).toMatchSnapshot();
    });
-
 });

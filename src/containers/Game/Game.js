@@ -5,7 +5,7 @@ import Desk from '../../components/Desk/Desk';
 import ScoreBar from '../../components/ScoreBar/ScoreBar';
 import ToolBar from '../../components/ToolBar/ToolBar';
 import {bindTo, randomizeHandTypes, getResult, resizeCollection} from '../../utils/utils';
-import {handTypes, gameRules, gameHistoryCount, defaultChoices} from '../../constants/game';
+import {handTypes, gameRules, gameHistoryCount, defaultChoice} from '../../constants/game';
 
 import './Game.css';
 
@@ -24,8 +24,8 @@ class Game extends React.Component {
     startGame() {
         this.setState(prevState => ({
             isPlaying: !prevState.isPlaying,
-            cpuChoice: defaultChoices.cpuChoice,
-            playerChoice: defaultChoices.cpuChoice
+            cpuChoice: defaultChoice,
+            playerChoice: defaultChoice
         }));
     }
 
@@ -40,7 +40,7 @@ class Game extends React.Component {
             cpuChoice,
             playerChoice,
             result: getResult(cpuPoints, playerPoints),
-            id: uid() //unique id on every array element, we are going to use it as react element key
+            id: uid() //unique id for every array element, we are going to use it as key
         };
         this.setState(prevState => ({
             cpuChoice,

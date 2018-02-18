@@ -2,6 +2,8 @@ import React from 'react';
 import HandButton from './HandButton/HandButton';
 import PropTypes from 'prop-types';
 
+import './ToolBar.css';
+
 const ToolBar = ({handTypes, choseHandType}) => (
     <div className="tool-bar">
         {Object.values(handTypes).map(h => (

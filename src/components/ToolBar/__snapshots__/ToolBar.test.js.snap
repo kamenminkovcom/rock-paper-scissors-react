@@ -7,11 +7,11 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <ToolBar
     choseHandType={[Function]}
     handTypes={
-        Array [
-            "paper",
-            "rock",
-            "scissors",
-          ]
+        Object {
+            "paper": "paper",
+            "rock": "rock",
+            "scissors": "scissors",
+          }
     }
 />,
   Symbol(enzyme.__renderer__): Object {

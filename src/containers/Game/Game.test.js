@@ -1,14 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import Game from './Game';
-import {handTypes, gameHistoryCount, defaultChoices} from '../../constants/game';
+import {handTypes, gameHistoryCount, defaultChoice} from '../../constants/game';
 
 describe('<Game/>', () => {
     let wrapper;
-    const defaultChoicesTypes = {
-        cpuChoice: typeof defaultChoices.cpuChoice,
-        playerChoice: typeof defaultChoices.playerChoice,
-    };
+    const defaultChoiceType = typeof defaultChoice;
 
     beforeEach(() => {
         wrapper = shallow(<Game/>);
@@ -48,11 +45,11 @@ describe('<Game/>', () => {
     });
 
     it('Should initialize cpuChoice correctly', () => {
-        expect(typeof wrapper.state().cpuChoice === defaultChoicesTypes.cpuChoice).toEqual(true);
+        expect(typeof wrapper.state().cpuChoice === defaultChoiceType).toEqual(true);
     });
 
     it('Should initialize playerChoice correctly', () => {
-        expect(typeof wrapper.state().playerChoice === defaultChoicesTypes.playerChoice).toEqual(true);
+        expect(typeof wrapper.state().playerChoice === defaultChoiceType).toEqual(true);
     });
 
     it('Should set playerChoice after play', () => {
@@ -88,13 +85,21 @@ describe('<Game/>', () => {
         wrapper.instance().startGame();
         wrapper.instance().choseHandType(handTypes.rock);
         wrapper.instance().startGame();
-        expect(typeof wrapper.state().cpuChoice === defaultChoicesTypes.cpuChoice).toEqual(true);
+        expect(typeof wrapper.state().cpuChoice === defaultChoiceType).toEqual(true);
     });
 
     it('Should set default playerChoice after play button is clicked for second time', () => {
         wrapper.instance().startGame();
         wrapper.instance().choseHandType(handTypes.rock);
         wrapper.instance().startGame();
-        expect(typeof wrapper.state().playerChoice === defaultChoicesTypes.playerChoice).toEqual(true);
+        expect(typeof wrapper.state().playerChoice === defaultChoiceType).toEqual(true);
+    });
+
+    it('Should initialize correctly playerScore', () => {
+       expect(wrapper.state().playerScore === 0).toEqual(true);
+    });
+
+    it('Should initialize correctly cpuScore', () => {
+        expect(wrapper.state().cpuScore === 0).toEqual(true);
     });
 });

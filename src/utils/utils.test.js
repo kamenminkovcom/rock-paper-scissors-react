@@ -1,4 +1,4 @@
-import {getResult, randomizeHandTypes, bindTo, resizeCollection} from './utils';
+import {getResult, randomizeHandTypes, resizeCollection} from './utils';
 import {possibleResults} from '../constants/game';
 
 describe('utils', () => {
