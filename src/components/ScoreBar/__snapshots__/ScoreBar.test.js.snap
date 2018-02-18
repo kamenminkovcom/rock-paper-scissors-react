@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScoreBar/> Should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ScoreBar
+    cpuScores={1}
+    playerScores={1}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="bold"
+>
+          CPU: 
+          <span>
+                    1
+          </span>
+</span>,
+        <span>
+          Scores
+</span>,
+        <span
+          className="bold"
+>
+          You: 
+          <span>
+                    1
+          </span>
+</span>,
+      ],
+      "className": "score-bar-container default-row-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "CPU: ",
+            <span>
+              1
+</span>,
+          ],
+          "className": "bold",
+        },
+        "ref": null,
+        "rendered": Array [
+          "CPU: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": 1,
+            },
+            "ref": null,
+            "rendered": 1,
+            "type": "span",
+          },
+        ],
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Scores",
+        },
+        "ref": null,
+        "rendered": "Scores",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "You: ",
+            <span>
+              1
+</span>,
+          ],
+          "className": "bold",
+        },
+        "ref": null,
+        "rendered": Array [
+          "You: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": 1,
+            },
+            "ref": null,
+            "rendered": 1,
+            "type": "span",
+          },
+        ],
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="bold"
+>
+            CPU: 
+            <span>
+                        1
+            </span>
+</span>,
+          <span>
+            Scores
+</span>,
+          <span
+            className="bold"
+>
+            You: 
+            <span>
+                        1
+            </span>
+</span>,
+        ],
+        "className": "score-bar-container default-row-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "CPU: ",
+              <span>
+                1
+</span>,
+            ],
+            "className": "bold",
+          },
+          "ref": null,
+          "rendered": Array [
+            "CPU: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 1,
+              },
+              "ref": null,
+              "rendered": 1,
+              "type": "span",
+            },
+          ],
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Scores",
+          },
+          "ref": null,
+          "rendered": "Scores",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "You: ",
+              <span>
+                1
+</span>,
+            ],
+            "className": "bold",
+          },
+          "ref": null,
+          "rendered": Array [
+            "You: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": 1,
+              },
+              "ref": null,
+              "rendered": 1,
+              "type": "span",
+            },
+          ],
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
