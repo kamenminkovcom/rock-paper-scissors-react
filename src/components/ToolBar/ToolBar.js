@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ToolBar = ({handTypes, choseHandType}) => (
     <div className="tool-bar">
-        {Object.keys(handTypes).map(h => (
+        {Object.values(handTypes).map(h => (
             <HandButton handType={h}
                         handleClick={() => choseHandType(h)}
                         key={h}/>
@@ -13,7 +13,7 @@ const ToolBar = ({handTypes, choseHandType}) => (
 );
 
 ToolBar.propTypes = {
-    handTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handTypes: PropTypes.object.isRequired,
     choseHandType: PropTypes.func.isRequired
 };
 

@@ -22,7 +22,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="desk-half aa"
+          className="desk-half"
 >
           <div>
                     <PlayButton
@@ -50,7 +50,7 @@ ShallowWrapper {
                         playFunc={undefined}
             />
 </div>,
-          "className": "desk-half aa",
+          "className": "desk-half",
         },
         "ref": null,
         "rendered": Object {
@@ -107,7 +107,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="desk-half aa"
+            className="desk-half"
 >
             <div>
                         <PlayButton
@@ -135,7 +135,7 @@ ShallowWrapper {
                             playFunc={undefined}
               />
 </div>,
-            "className": "desk-half aa",
+            "className": "desk-half",
           },
           "ref": null,
           "rendered": Object {

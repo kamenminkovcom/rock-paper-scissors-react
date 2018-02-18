@@ -6,7 +6,10 @@ import './HandButton.css';
 
 const HandButton = ({handleClick, handType}) => (
     <button onClick={handleClick}
-            className={classnames(handType, 'background-no-repeat', 'background-contain-size', 'hand-button')}/>
+            className={classnames(handType,
+                'background-no-repeat',
+                'background-contain-size',
+                'hand-button')}/>
 );
 
 HandButton.propTypes = {

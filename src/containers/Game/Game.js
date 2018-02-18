@@ -1,19 +1,18 @@
 import React from 'react';
-import Hand from './components/Hand/Hand';
-import Desk from './components/Desk/Desk';
-import ScoreBar from './components/ScoreBar/ScoreBar';
-import ToolBar from './components/ToolBar/ToolBar';
-import {bindTo, randomizeHandTypes, getResult, resizeCollection} from './utils/utils';
-import {handTypes, gameRules, gameHistoryCount} from './constants/game';
+import uid from 'uid';
+import Hand from '../../components/Hand/Hand';
+import Desk from '../../components/Desk/Desk';
+import ScoreBar from '../../components/ScoreBar/ScoreBar';
+import ToolBar from '../../components/ToolBar/ToolBar';
+import {bindTo, randomizeHandTypes, getResult, resizeCollection} from '../../utils/utils';
+import {handTypes, gameRules, gameHistoryCount, defaultChoices} from '../../constants/game';
+
+import './Game.css';
 
 class Game extends React.Component {
     constructor(props) {
         super(props);
         bindTo('startGame', 'choseHandType')(this);
-        this.initialState = {
-            cpuChoice: null,
-            playerChoice: null
-        };
         this.state = {
             isPlaying: false,
             cpuScore: 0,
@@ -25,8 +24,8 @@ class Game extends React.Component {
     startGame() {
         this.setState(prevState => ({
             isPlaying: !prevState.isPlaying,
-            cpuChoice: this.initialState.cpuChoice,
-            playerChoice: this.initialState.cpuChoice
+            cpuChoice: defaultChoices.cpuChoice,
+            playerChoice: defaultChoices.cpuChoice
         }));
     }
 
@@ -40,7 +39,8 @@ class Game extends React.Component {
         const gameResult = {
             cpuChoice,
             playerChoice,
-            result: getResult(cpuPoints, playerPoints)
+            result: getResult(cpuPoints, playerPoints),
+            id: uid() //unique id on every array element, we are going to use it as react element key
         };
         this.setState(prevState => ({
             cpuChoice,
@@ -69,7 +69,7 @@ class Game extends React.Component {
                     <Hand isCpu={!!cpuChoice} handType={cpuChoice ? cpuChoice : 'rules'}/>
                     <Desk playFunc={this.startGame}
                           isPlaying={isPlaying}
-                          history={history}  />
+                          history={history}/>
                     <Hand handType={playerChoice ? playerChoice : 'rules'}/>
                 </div>
                 {isPlaying && <ToolBar choseHandType={this.choseHandType}

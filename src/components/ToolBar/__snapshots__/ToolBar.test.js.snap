@@ -28,15 +28,15 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <HandButton
-          handType="0"
+          handType="paper"
           handleClick={[Function]}
 />,
         <HandButton
-          handType="1"
+          handType="rock"
           handleClick={[Function]}
 />,
         <HandButton
-          handType="2"
+          handType="scissors"
           handleClick={[Function]}
 />,
       ],
@@ -46,10 +46,10 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "0",
+        "key": "paper",
         "nodeType": "function",
         "props": Object {
-          "handType": "0",
+          "handType": "paper",
           "handleClick": [Function],
         },
         "ref": null,
@@ -58,10 +58,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1",
+        "key": "rock",
         "nodeType": "function",
         "props": Object {
-          "handType": "1",
+          "handType": "rock",
           "handleClick": [Function],
         },
         "ref": null,
@@ -70,10 +70,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "2",
+        "key": "scissors",
         "nodeType": "function",
         "props": Object {
-          "handType": "2",
+          "handType": "scissors",
           "handleClick": [Function],
         },
         "ref": null,
@@ -91,15 +91,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <HandButton
-            handType="0"
+            handType="paper"
             handleClick={[Function]}
 />,
           <HandButton
-            handType="1"
+            handType="rock"
             handleClick={[Function]}
 />,
           <HandButton
-            handType="2"
+            handType="scissors"
             handleClick={[Function]}
 />,
         ],
@@ -109,10 +109,10 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "0",
+          "key": "paper",
           "nodeType": "function",
           "props": Object {
-            "handType": "0",
+            "handType": "paper",
             "handleClick": [Function],
           },
           "ref": null,
@@ -121,10 +121,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1",
+          "key": "rock",
           "nodeType": "function",
           "props": Object {
-            "handType": "1",
+            "handType": "rock",
             "handleClick": [Function],
           },
           "ref": null,
@@ -133,10 +133,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "2",
+          "key": "scissors",
           "nodeType": "function",
           "props": Object {
-            "handType": "2",
+            "handType": "scissors",
             "handleClick": [Function],
           },
           "ref": null,

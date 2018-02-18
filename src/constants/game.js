@@ -36,3 +36,8 @@ export const classNames = {
 };
 
 export const gameHistoryCount = 5;
+
+export const defaultChoices = {
+    cpuChoice: undefined,
+    playerChoice: undefined
+};

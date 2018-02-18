@@ -8,9 +8,10 @@ import {handTypes, possibleResults} from '../../constants/game';
 
 import './Desk.css';
 
+//todo make this component cleaner
 const Desk = ({playFunc, isPlaying, history}) => (
     <div className="desk">
-        <div className="desk-half aa">
+        <div className="desk-half">
             {
                 isPlaying ?
                     <PlayMessage/> :
@@ -26,18 +27,20 @@ const Desk = ({playFunc, isPlaying, history}) => (
             {
                 history.map(h => <HistoryRow result={h.result}
                                              cpuChoice={h.cpuChoice}
-                                             playerChoice={h .playerChoice}/>)
+                                             playerChoice={h.playerChoice}
+                                             key={h.id}/>)
             }
         </div>
     </div>
 );
 
 Desk.propTypes = {
-    handleClick: PropTypes.func.isRequred,
+    playFunc: PropTypes.func.isRequired,
     history: PropTypes.arrayOf(PropTypes.shape({
         cpuChoice: PropTypes.oneOf(Object.values(handTypes)),
         result: PropTypes.oneOf(Object.values(possibleResults)),
-        playerChoice: PropTypes.oneOf(Object.values(handTypes))
+        playerChoice: PropTypes.oneOf(Object.values(handTypes)),
+        id: PropTypes.string.isRequired
     })).isRequired
 };
 
