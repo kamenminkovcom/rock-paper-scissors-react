@@ -13,7 +13,7 @@ This project is a simple implementation of the game ["Rock-paper-scissors"](http
 
 ### `npm install`
 
-Running `npm install` from the terminal at the root direcory of the project (the directory this `package.json` file) will install the dependencies you need to start it.
+Running `npm install` from the terminal at the root direcory of the project (the directory with `package.json` file) will install the dependencies you need to start it.
 
 ## Available Scripts
 
