@@ -1,7 +1,9 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import Game from './Game';
+import ToolBar from '../../components/ToolBar/ToolBar';
 import {handTypes, gameHistoryCount, defaultChoice} from '../../constants/game';
+
 
 describe('<Game/>', () => {
     let wrapper;
@@ -101,5 +103,23 @@ describe('<Game/>', () => {
 
     it('Should initialize correctly cpuScore', () => {
         expect(wrapper.state().cpuScore === 0).toEqual(true);
+    });
+
+    it('Should not render ToolBar initially', () => {
+        const mountedWrapper = mount(<Game/>);
+        expect(mountedWrapper.find(ToolBar).children().length === 0).toEqual(true);
+    });
+
+    it('Should not render ToolBar if choseHandType is called', () => {
+        const mountedWrapper = mount(<Game/>);
+        mountedWrapper.instance().startGame();
+        mountedWrapper.instance().choseHandType(handTypes.paper);
+        expect(mountedWrapper.find(ToolBar).children().length === 0).toEqual(true);
+    });
+
+    it('Should render ToolBar if isPlaying is true', () => {
+        const mountedWrapper = mount(<Game/>);
+        mountedWrapper.setState({isPlaying: true});
+        expect(mountedWrapper.find(ToolBar).children().length > 0).toEqual(true);
     });
 });

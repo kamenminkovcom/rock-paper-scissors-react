@@ -4,7 +4,7 @@ exports[`<ToolBar/> Should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ToolBar
+  Symbol(enzyme.__unrendered__): <WithCondition
     choseHandType={[Function]}
     handTypes={
         Object {
@@ -21,131 +21,9 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <HandButton
-          handType="paper"
-          handleClick={[Function]}
-/>,
-        <HandButton
-          handType="rock"
-          handleClick={[Function]}
-/>,
-        <HandButton
-          handType="scissors"
-          handleClick={[Function]}
-/>,
-      ],
-      "className": "tool-bar",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "paper",
-        "nodeType": "function",
-        "props": Object {
-          "handType": "paper",
-          "handleClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "rock",
-        "nodeType": "function",
-        "props": Object {
-          "handType": "rock",
-          "handleClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "scissors",
-        "nodeType": "function",
-        "props": Object {
-          "handType": "scissors",
-          "handleClick": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
+  Symbol(enzyme.__node__): undefined,
   Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <HandButton
-            handType="paper"
-            handleClick={[Function]}
-/>,
-          <HandButton
-            handType="rock"
-            handleClick={[Function]}
-/>,
-          <HandButton
-            handType="scissors"
-            handleClick={[Function]}
-/>,
-        ],
-        "className": "tool-bar",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "paper",
-          "nodeType": "function",
-          "props": Object {
-            "handType": "paper",
-            "handleClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "rock",
-          "nodeType": "function",
-          "props": Object {
-            "handType": "rock",
-            "handleClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "scissors",
-          "nodeType": "function",
-          "props": Object {
-            "handType": "scissors",
-            "handleClick": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "div",
-    },
+    undefined,
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

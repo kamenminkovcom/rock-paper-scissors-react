@@ -72,8 +72,9 @@ class Game extends React.Component {
                           history={history}/>
                     <Hand handType={playerChoice ? playerChoice : 'rules'}/>
                 </div>
-                {isPlaying && <ToolBar choseHandType={this.choseHandType}
-                                       handTypes={handTypes}/>}
+                <ToolBar choseHandType={this.choseHandType}
+                                       handTypes={handTypes}
+                                       shouldShow={isPlaying}/>}
             </div>
         )
     }

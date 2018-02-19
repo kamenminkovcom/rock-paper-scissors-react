@@ -38,7 +38,18 @@ ShallowWrapper {
                     handType="rules"
           />
 </div>,
-        false,
+        <WithCondition
+          choseHandType={[Function]}
+          handTypes={
+                    Object {
+                              "paper": "paper",
+                              "rock": "rock",
+                              "scissors": "scissors",
+                            }
+          }
+          shouldShow={false}
+/>,
+        "}",
       ],
     },
     "ref": null,
@@ -117,7 +128,24 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "choseHandType": [Function],
+          "handTypes": Object {
+            "paper": "paper",
+            "rock": "rock",
+            "scissors": "scissors",
+          },
+          "shouldShow": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "}",
     ],
     "type": "div",
   },
@@ -148,7 +176,18 @@ ShallowWrapper {
                         handType="rules"
             />
 </div>,
-          false,
+          <WithCondition
+            choseHandType={[Function]}
+            handTypes={
+                        Object {
+                                    "paper": "paper",
+                                    "rock": "rock",
+                                    "scissors": "scissors",
+                                  }
+            }
+            shouldShow={false}
+/>,
+          "}",
         ],
       },
       "ref": null,
@@ -227,7 +266,24 @@ ShallowWrapper {
           ],
           "type": "div",
         },
-        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "choseHandType": [Function],
+            "handTypes": Object {
+              "paper": "paper",
+              "rock": "rock",
+              "scissors": "scissors",
+            },
+            "shouldShow": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "}",
       ],
       "type": "div",
     },
