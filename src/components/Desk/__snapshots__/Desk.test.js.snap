@@ -25,10 +25,22 @@ ShallowWrapper {
         <div
           className="desk-half"
 >
-          <PlayMessage />
-          <HistoryHeader
+          <WithCondition
+                    shouldShow={true}
+          />
+          <WithCondition
+                    playFunc={[Function]}
+                    shouldShow={false}
+          />
+          <WithCondition
+                    message={false}
+                    result={false}
+                    shouldShow={false}
+          />
+          <WithCondition
                     classes="history-header"
                     count={0}
+                    shouldShow={false}
           />
 </div>,
         <div
@@ -47,10 +59,22 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <PlayMessage />,
-            <HistoryHeader
+            <WithCondition
+              shouldShow={true}
+/>,
+            <WithCondition
+              playFunc={[Function]}
+              shouldShow={false}
+/>,
+            <WithCondition
+              message={false}
+              result={false}
+              shouldShow={false}
+/>,
+            <WithCondition
               classes="history-header"
               count={0}
+              shouldShow={false}
 />,
           ],
           "className": "desk-half",
@@ -60,8 +84,10 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
+            "nodeType": "class",
+            "props": Object {
+              "shouldShow": true,
+            },
             "ref": null,
             "rendered": null,
             "type": [Function],
@@ -69,10 +95,36 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
+            "props": Object {
+              "playFunc": [Function],
+              "shouldShow": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "message": false,
+              "result": false,
+              "shouldShow": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
             "props": Object {
               "classes": "history-header",
               "count": 0,
+              "shouldShow": false,
             },
             "ref": null,
             "rendered": null,
@@ -106,10 +158,22 @@ ShallowWrapper {
           <div
             className="desk-half"
 >
-            <PlayMessage />
-            <HistoryHeader
+            <WithCondition
+                        shouldShow={true}
+            />
+            <WithCondition
+                        playFunc={[Function]}
+                        shouldShow={false}
+            />
+            <WithCondition
+                        message={false}
+                        result={false}
+                        shouldShow={false}
+            />
+            <WithCondition
                         classes="history-header"
                         count={0}
+                        shouldShow={false}
             />
 </div>,
           <div
@@ -128,10 +192,22 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <PlayMessage />,
-              <HistoryHeader
+              <WithCondition
+                shouldShow={true}
+/>,
+              <WithCondition
+                playFunc={[Function]}
+                shouldShow={false}
+/>,
+              <WithCondition
+                message={false}
+                result={false}
+                shouldShow={false}
+/>,
+              <WithCondition
                 classes="history-header"
                 count={0}
+                shouldShow={false}
 />,
             ],
             "className": "desk-half",
@@ -141,8 +217,10 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
+              "nodeType": "class",
+              "props": Object {
+                "shouldShow": true,
+              },
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -150,10 +228,36 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
+              "props": Object {
+                "playFunc": [Function],
+                "shouldShow": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "message": false,
+                "result": false,
+                "shouldShow": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
               "props": Object {
                 "classes": "history-header",
                 "count": 0,
+                "shouldShow": false,
               },
               "ref": null,
               "rendered": null,

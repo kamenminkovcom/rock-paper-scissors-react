@@ -4,7 +4,7 @@ exports[`<PlayMessage/> Should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PlayMessage />,
+  Symbol(enzyme.__unrendered__): <WithCondition />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -12,31 +12,9 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": "Please, make your choice.",
-      "className": "play-message",
-    },
-    "ref": null,
-    "rendered": "Please, make your choice.",
-    "type": "div",
-  },
+  Symbol(enzyme.__node__): undefined,
   Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Please, make your choice.",
-        "className": "play-message",
-      },
-      "ref": null,
-      "rendered": "Please, make your choice.",
-      "type": "div",
-    },
+    undefined,
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

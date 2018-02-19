@@ -4,7 +4,7 @@ exports[`<PlayButton/> Should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PlayButton
+  Symbol(enzyme.__unrendered__): <WithCondition
     playFunc={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -14,65 +14,9 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <button
-        className="play-button"
-        onClick={[Function]}
->
-        Play!
-</button>,
-      "className": "play-button-container",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Play!",
-        "className": "play-button",
-        "onClick": [Function],
-      },
-      "ref": null,
-      "rendered": "Play!",
-      "type": "button",
-    },
-    "type": "div",
-  },
+  Symbol(enzyme.__node__): undefined,
   Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <button
-          className="play-button"
-          onClick={[Function]}
->
-          Play!
-</button>,
-        "className": "play-button-container",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Play!",
-          "className": "play-button",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Play!",
-        "type": "button",
-      },
-      "type": "div",
-    },
+    undefined,
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

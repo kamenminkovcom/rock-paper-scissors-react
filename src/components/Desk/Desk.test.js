@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import Desk from './Desk';
 import HistoryRow from './HistoryRow/HistoryRow';
 import PlayMessage from './PlayMessage/PlayMessage';
@@ -50,27 +50,27 @@ describe('<Desk/>', () => {
     });
 
     it('Should not render play massage if isPlaying is false', () => {
-        const wrapper = shallow(<Desk history={[]} playFunc={() => {
+        const wrapper = mount(<Desk history={[]} playFunc={() => {
         }} isPlaying={false}/>);
-        expect(wrapper.find(PlayMessage).length === 0).toEqual(true);
+        expect(wrapper.find(PlayMessage).children().length === 0).toEqual(true);
     });
 
     it('Should render play massage if isPlaying is true', () => {
-        const wrapper = shallow(<Desk history={[]} playFunc={() => {
+        const wrapper = mount(<Desk history={[]} playFunc={() => {
         }} isPlaying={true}/>);
-        expect(wrapper.find(PlayMessage).length === 1).toEqual(true);
+        expect(wrapper.find(PlayMessage).children().length > 0).toEqual(true);
     });
 
     it('Should not render result massage if isPlaying is true', () => {
-        const wrapper = shallow(<Desk history={[]} playFunc={() => {
+        const wrapper = mount(<Desk history={[]} playFunc={() => {
         }} isPlaying={true}/>);
-        expect(wrapper.find(ResultMessage).length === 0).toEqual(true);
+        expect(wrapper.find(ResultMessage).children().length === 0).toEqual(true);
     });
 
     it('Should not render result massage if isPlaying is true and has no history', () => {
-        const wrapper = shallow(<Desk history={[]} playFunc={() => {
+        const wrapper = mount(<Desk history={[]} playFunc={() => {
         }} isPlaying={false}/>);
-        expect(wrapper.find(ResultMessage).length === 0).toEqual(true);
+        expect(wrapper.find(ResultMessage).children().length === 0).toEqual(true);
     });
 
     it('Should render result massage if isPlaying is true and has history', () => {
@@ -80,8 +80,8 @@ describe('<Desk/>', () => {
             result: possibleResults.win,
             id: uid()
         };
-        const wrapper = shallow(<Desk history={[game]} playFunc={() => {
+        const wrapper = mount(<Desk history={[game]} playFunc={() => {
         }} isPlaying={false}/>);
-        expect(wrapper.find(ResultMessage).length === 1).toEqual(true);
+        expect(wrapper.find(ResultMessage).children().length > 0).toEqual(true);
     });
 });

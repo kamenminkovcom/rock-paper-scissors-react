@@ -12,18 +12,14 @@ import './Desk.css';
 const Desk = ({playFunc, isPlaying, history}) => (
     <div className="desk">
         <div className="desk-half">
-            {
-                isPlaying ? //checks the game state, if the player is clicked 'Play', the button shouldn't be on the screen
-                    <PlayMessage/> :
-                    <div>
-                        <PlayButton playFunc={playFunc}/>
-                        {history.length !== 0 &&  //checks if the game is not already stared
-                        <ResultMessage message={history[0].result} //if so shouldn't show the result from the last game
-                                       result={history[0].result}/>}
-                    </div>
-            }
+            <PlayMessage shouldShow={isPlaying}/>
+            <PlayButton playFunc={playFunc} shouldShow={!isPlaying}/>
+            <ResultMessage message={!!history.length && history[0].result}
+                           result={!!history.length && history[0].result}
+                           shouldShow={!isPlaying && !!history.length}/>
             <HistoryHeader count={history.length}
-                           classes={'history-header'}/>
+                           classes={'history-header'}
+                           shouldShow={!!history.length}/>
         </div>
         <div className="desk-half">
             {

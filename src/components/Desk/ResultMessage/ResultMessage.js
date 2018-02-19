@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import withCondition from '../../../HOC/WithCondition';
 import {classNames, possibleResults} from '../../../constants/game';
 
 import './ResultMessage.css';
@@ -21,4 +22,4 @@ ResultMessage.propTypes = {
     result: PropTypes.oneOf(Object.values(possibleResults))
 };
 
-export default ResultMessage;
+export default withCondition(ResultMessage);

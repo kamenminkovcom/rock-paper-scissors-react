@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import withCondition from '../../../HOC/WithCondition';
 
 import './PlayButton.css';
 
@@ -13,4 +14,4 @@ PlayButton.propTypes = {
     playFunc: PropTypes.func.isRequired
 };
 
-export default PlayButton;
+export default withCondition(PlayButton);

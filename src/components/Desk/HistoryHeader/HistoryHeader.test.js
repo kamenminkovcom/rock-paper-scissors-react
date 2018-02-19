@@ -7,9 +7,4 @@ describe('<HistoryHeader/>', () => {
         const wrapper = shallow(<HistoryHeader count={1}/>);
         expect(wrapper).toMatchSnapshot();
     });
-
-    it('Should not render if count is 0', () => {
-       const wrapper = shallow(<HistoryHeader count={0}/>);
-       expect(wrapper.instance() === null).toEqual(true);
-    });
 });

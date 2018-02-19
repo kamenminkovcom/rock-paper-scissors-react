@@ -4,7 +4,7 @@ exports[`<ResultMessage/> Should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ResultMessage
+  Symbol(enzyme.__unrendered__): <WithCondition
     message="win"
     result="win"
 />,
@@ -15,31 +15,9 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": "win",
-      "className": "win result-message win-border uppercase",
-    },
-    "ref": null,
-    "rendered": "win",
-    "type": "div",
-  },
+  Symbol(enzyme.__node__): undefined,
   Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "win",
-        "className": "win result-message win-border uppercase",
-      },
-      "ref": null,
-      "rendered": "win",
-      "type": "div",
-    },
+    undefined,
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
